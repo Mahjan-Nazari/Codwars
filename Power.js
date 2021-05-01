@@ -23,3 +23,17 @@ function numberToPower(number, power) {
   if (power === 0) return 1;
   return number * numberToPower(number, power - 1);
 }
+
+//-----------------------------------------------------------------------------------------//
+
+function numberToPower(number, power) {
+  // Code here
+  let result = 1;
+  let num = power;
+  while (num > 0) {
+    num--;
+    result *= number;
+  }
+  return result;
+}
+console.log(numberToPower(2, 3));
